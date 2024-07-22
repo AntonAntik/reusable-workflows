@@ -37,7 +37,6 @@ jobs:
     needs: start_orchestrator
     if: ${{ success() }}
     uses: AntonAntik/reusable-workflows/.github/workflows/restart-backend.yml@main
-    secrets: inherit
 
 #  orchestrator:
 #    runs-on: ubuntu-latest
