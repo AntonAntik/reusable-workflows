@@ -2,8 +2,6 @@ name: Restart Backend in main package
 
 on:
   workflow_call:
-    secrets: inherit
-    variables: inherit
 
 jobs:
   call_restart:
