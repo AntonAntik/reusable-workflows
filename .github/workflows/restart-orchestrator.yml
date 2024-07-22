@@ -23,8 +23,6 @@ on:
           - prod
         default: 'dev'
         type: choice
-  workflow_call:
-    secrets: inherit
 
 jobs:
   start_orchestrator:
@@ -37,6 +35,7 @@ jobs:
     needs: start_orchestrator
     if: ${{ success() }}
     uses: AntonAntik/reusable-workflows/.github/workflows/restart-backend.yml@main
+    secrets: inherit
 
 #  orchestrator:
 #    runs-on: ubuntu-latest
