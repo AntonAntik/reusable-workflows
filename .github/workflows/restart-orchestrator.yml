@@ -36,7 +36,7 @@ jobs:
   restart_backend:
     needs: start_orchestrator
     if: ${{ success() }}
-    uses: AntonAntik/reusable-workflows/.github/workflows/restart-backend.yml@v1
+    uses: ./.github/workflows/restart-backend.yml@v1
 
 #  orchestrator:
 #    runs-on: ubuntu-latest
